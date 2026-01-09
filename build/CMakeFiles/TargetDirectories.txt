@@ -1,0 +1,3 @@
+/home/memoryarrays/Documents/shader-experiments/build/CMakeFiles/ShaderExp.dir
+/home/memoryarrays/Documents/shader-experiments/build/CMakeFiles/edit_cache.dir
+/home/memoryarrays/Documents/shader-experiments/build/CMakeFiles/rebuild_cache.dir
