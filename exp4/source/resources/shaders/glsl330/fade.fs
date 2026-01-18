@@ -1,6 +1,6 @@
 #version 330
 
-#define FPS 300.0
+#define FPS 60.0
 #define MAX_FADE_STIME 8.0
 #define MAX_FADE_FTIME int(FPS * MAX_FADE_STIME)
 
@@ -19,10 +19,10 @@ void main()
 	vec4 fadeTime = texture(iFadeTime, fragTexCoord) * 255;
 
 
-	int fadeTimeI = int(fadeTime.r) | 
+	int fadeTimeI = int(fadeTime.a) | 
 		(int(fadeTime.b) << 8) |
 		(int(fadeTime.g) << 16) |
-		(int(fadeTime.a) << 32);
+		(int(fadeTime.r) << 24);
 
 
 	fragColor.a = fadeTimeI / float(MAX_FADE_FTIME);
